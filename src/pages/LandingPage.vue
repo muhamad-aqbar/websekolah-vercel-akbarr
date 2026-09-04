@@ -1,18 +1,16 @@
- <!-- <template>
- <main>
- <h1>Selamat Datang di Onlineshop Sekolah</h1>
- <p>Belanja gampang, sekolah senang.</p>
- </main>
-</template> -->
+ 
 <template>
   <div class="landing-page">
     <!-- HERO SECTION -->
-    <section class="hero">
-      <h1 class="hero-title">Mau Mobil? Beli lah di ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
-      <p class="hero-subtitle">
+    <section class="bg-gradient-to-br from-black/15 via-purple-600/30 to-[#2c1414] text-white text-center px-5 py-20 rounded-[20px]">
+      <h1 class="text-4xl font-bold mb-4">Mau Mobil? Beli lah di ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
+      <center><p class="text-lg max-w-[500px] mx-auto mb-8 opacity-90">
        Platform untuk mobil-mobil class atass.
-      </p>
-      <RouterLink to="/product" class="hero-button">
+      </p></center>
+      <RouterLink
+        to="/product"
+        class="inline-block bg-white text-teal-700 px-7 py-3 rounded-full font-semibold no-underline transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+      >
         Lihat Produk
       </RouterLink>
     </section>
@@ -64,43 +62,6 @@ const features = [
   color: #222;
 }
 
-/* ===== HERO ===== */
-.hero {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.137)40%, #9c3aed49)60%, rgb(44, 20, 20)100%;
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-  border-radius: 20px;
-}
-
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 16px;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  max-width: 500px;
-  margin: 0 auto 32px;
-  opacity: 0.9;
-}
-
-.hero-button {
-  display: inline-block;
-  background: #fff;
-  color: #0f766e;
-  padding: 12px 28px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
 /* ===== FEATURES ===== */
 .features {
   display: flex;
@@ -115,4 +76,4 @@ video {
  border-radius: 10px;
  display: block;
 }
-</style> 
+</style>

@@ -7,7 +7,7 @@
  </nav> -->
 <header class="navbar">
       <!-- <div class="brand-logo"></div>-->
-      <h1>ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
+      <p style="font-size: 30px;"> ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</p>
       
       <nav class="nav-links">
         <RouterLink to="/" class="nav-item">Landing</RouterLink>

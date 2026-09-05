@@ -1,12 +1,11 @@
- 
 <template>
   <div class="landing-page">
     <!-- HERO SECTION -->
-    <section class="bg-gradient-to-br from-black/15 via-purple-600/30 to-[#2c1414] text-white text-center px-5 py-20 rounded-[20px]">
-      <h1 class="text-4xl font-bold mb-4">Mau Mobil? Beli lah di ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
-      <center><p class="text-lg max-w-[500px] mx-auto mb-8 opacity-90">
+    <section class="bg-gradient-to-br from-black/[0.137] from-[40%] via-[#9c3aed]/[0.286] via-[60%] to-[#2c1414] to-100% text-white text-center px-5 py-20 rounded-[20px]">
+      <h1 class="text-4xl font-bold mb-6 leading-snug">Mau Mobil? Beli lah di ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
+      <p class="text-lg max-w-[500px] mx-auto mb-10 opacity-90 leading-relaxed">
        Platform untuk mobil-mobil class atass.
-      </p></center>
+      </p>
       <RouterLink
         to="/product"
         class="inline-block bg-white text-teal-700 px-7 py-3 rounded-full font-semibold no-underline transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-lg"

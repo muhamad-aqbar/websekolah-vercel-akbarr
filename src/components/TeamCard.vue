@@ -52,7 +52,7 @@ function ambilInisial(nama) {
   text-align: center;
   padding: 20px;
   border-radius: 12px;
-  background-color: #610c2c;
+  background-color: #5b0963;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 

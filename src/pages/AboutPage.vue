@@ -1,10 +1,3 @@
-<!-- <template>
- <main>
- <h1>About we</h1>
- <p>Kami berdiri sejak tahun 2017 .</p>
- </main>
-</template> -->
-
 <script setup>
 import TeamCard from '../components/TeamCard.vue'
 
@@ -33,18 +26,18 @@ const daftarTim = [
 </script>
 
 <template>
-  <div class="about-page">
+  <div class="[font-family:'Poppins',sans-serif] text-[#333333]">
     <!-- Banner Tentang Kami -->
-    <section class="banner">
-      <h1>Short story ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅 </h1>
-      <p>Kenali lebih dekat cerita dan orang-orang di balik toko </p>
+    <section class="bg-gradient-to-br from-black/[0.137] from-[40%] via-[#9c3aed]/[0.286] via-[60%] to-[#2c1414] to-100% text-white text-center px-5 py-[60px]">
+      <h1 class="m-0 mb-2 text-[2.2rem]">Short story ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅 </h1>
+      <p class="m-0 text-base opacity-90">Kenali lebih dekat cerita dan orang-orang di balik toko </p>
     </section>
 
     <!-- Bagian Cerita Kami: 2 kolom (teks & gambar) -->
-    <section class="cerita-kami">
-      <div class="cerita-kami__teks">
-        <h2>About we</h2>
-        <p>
+    <section class="flex max-[700px]:flex-col items-center gap-10 px-10 py-[60px] max-w-[1100px] mx-auto text-white">
+      <div class="flex-1">
+        <h2 class="mt-0 text-[#782688]">About we</h2>
+        <p class="leading-[1.7]">
          Pada tahun 2017 saya merintis toko saya karna saya sedang krisis ekonomi jadi saya mulai belajar untuk membangun usaha kecil-kecilan karna untuk membantu ekonomi keluarga saya, saya merintis dari awal jualan mobil bekas yang suda tua dan sampai sekarang sudah makin maju karna saya terus berjuang untuk membersarkan toko ini dan sekarang sudah memeilik beberapa cabang
          <br>
         
@@ -56,17 +49,17 @@ const daftarTim = [
         </p>
       </div>
 
-      <div class="cerita-kami__gambar img">
+      <div class="flex-1">
         <img
-          src="https://img.magnific.com/vektor-premium/desain-logo-dealer-mobil-teks_1234880-1950.jpg?semt=ais_hybrid&w=740&q=80" alt="Foto toko kami"
+          src="https://img.magnific.com/vektor-premium/desain-logo-dealer-mobil-teks_1234880-1950.jpg?semt=ais_hybrid&w=740&q=80" alt="Foto toko kami" class="w-full rounded-xl block"
         />
       </div>
     </section>
 
     <!-- Bagian Tim Kami -->
-    <section class="tim-kami">
-      <h2>Tim Kami</h2>
-      <div class="tim-kami__grid">
+    <section class="pt-5 px-10 pb-20 max-w-[1100px] mx-auto text-center">
+      <h2 class="text-[#691515] mb-[30px]">Tim Kami</h2>
+      <div class="flex flex-wrap justify-center gap-6">
         <TeamCard
           v-for="anggota in daftarTim"
           :key="anggota.id"
@@ -78,90 +71,3 @@ const daftarTim = [
     </section>
   </div>
 </template>
-
-<style scoped>
-.about-page {
-  font-family: 'Poppins', sans-serif;
-  color: #333333;
-}
-
-/* Warna banner disamakan dengan tema Landing Page (ganti sesuai warna kalian) */
-.banner {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.137)40%, #9c3aed49)60%, rgb(44, 20, 20)100%;
-  color: #ffffff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.banner h1 {
-  margin: 0 0 8px;
-  font-size: 2.2rem;
-}
-
-.banner p {
-  margin: 0;
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-/* Cerita Kami: layout 2 kolom */
-.cerita-kami {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 60px 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-  color: white;
-}
-
-.cerita-kami__teks {
-  flex: 1; /* kolom teks & gambar berbagi lebar merata */
-}
-
-.cerita-kami__teks h2 {
-  margin-top: 0;
-  color: #782688;
-}
-
-.cerita-kami__teks p {
-  line-height: 1.7;
-}
-
-.cerita-kami__gambar {
-  flex: 1;
-}
-
-.cerita-kami__gambar img {
-  width: 100%;
-  border-radius: 12px;
-  display: block;
-}
-
-/* Tim Kami */
-.tim-kami {
-  padding: 20px 40px 80px;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.tim-kami h2 {
-  color: #691515;
-  margin-bottom: 30px;
-}
-
-.tim-kami__grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-}
-
-/* Responsif: kolom Cerita Kami jadi tumpuk di layar kecil */
-@media (max-width: 700px) {
-  .cerita-kami {
-    flex-direction: column;
-  }
-}
-</style>

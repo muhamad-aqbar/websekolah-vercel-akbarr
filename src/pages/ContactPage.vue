@@ -1,19 +1,29 @@
+
 <script setup>
 import { ref } from 'vue'
+import CardProps from '../components/CardProps.vue'
 
 // Form ini cukup tampilan saja, belum perlu logic kirim beneran
 const nama = ref('')
 const email = ref('')
 const pesan = ref('')
+
+const infoKontak = [
+  { icon: '📍', title: 'Alamat', desc: 'Jl. Barsshop NO.12 Kota Bandung Jawa barat' },
+  { icon: '📞', title: 'Telepon', desc: '(+62) 1207-2010' },
+  { icon: '✉️', title: 'Email', desc: '@barss_shop.com' },
+  { icon: '🕒', title: 'Jam', desc: 'Senin – Sabtu, 09.00 – 18.00' }
+]
 </script>
 
 <template>
   <div class="contact-page">
     <!-- Banner, gaya sama seperti banner About Page -->
-    <section class="banner">
-      <h1>Hubungi Admin kami</h1>
-      <p>Ada pertanyaan atau masukan? Kami senang mendengarnya</p>
-    </section>
+    <CardProps
+      variant="banner"
+      title="Hubungi Admin kami"
+      desc="Ada pertanyaan atau masukan? Kami senang mendengarnya"
+    />
 
     <!-- 2 kolom sejajar: Info Kontak & Formulir -->
     <section class="contact-content">
@@ -21,37 +31,14 @@ const pesan = ref('')
       <div class="info-kontak">
         <h2>Info Kontak</h2>
 
-        <div class="info-item">
-          <span class="info-item__ikon">📍</span>
-          <div>
-            <strong>Alamat</strong>
-            <p>Jl. Barsshop NO.12 Kota Bandung Jawa barat </p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <span class="info-item__ikon">📞</span>
-          <div>
-            <strong>Telepon</strong>
-            <p>(+62) 1207-2010</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <span class="info-item__ikon">✉️</span>
-          <div>
-            <strong>Email</strong>
-            <p>@barss_shop.com</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <span class="info-item__ikon">🕒</span>
-          <div>
-            <strong>Jam</strong>
-            <p>Senin – Sabtu, 09.00 – 18.00</p>
-          </div>
-        </div>
+        <CardProps
+          v-for="item in infoKontak"
+          :key="item.title"
+          variant="info"
+          :icon="item.icon"
+          :title="item.title"
+          :desc="item.desc"
+        />
       </div>
 
       <!-- Kolom kanan: Formulir -->
@@ -96,24 +83,6 @@ const pesan = ref('')
   color: #333333;
 }
 
-/* Banner senada dengan About Page */
-.banner {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.137)40%, #9c3aed49)60%, rgb(44, 20, 20)100%;
-  color: #ffffff;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.banner h1 {
-  margin: 0 0 8px;
-  font-size: 2.2rem;
-}
-
-.banner p {
-  margin: 0;
-  opacity: 0.9;
-}
-
 /* Layout 2 kolom sejajar */
 .contact-content {
   display: flex;
@@ -133,29 +102,6 @@ const pesan = ref('')
 .form-kontak h2 {
   color: #39084d;
   margin-top: 0;
-}
-
-/* Item info kontak */
-.info-item {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 22px;
-}
-
-.info-item__ikon {
-  font-size: 1.4rem;
-}
-
-.info-item strong {
-  display: block;
-  margin-bottom: 2px;
-  color:aliceblue;
-}
-
-.info-item p {
-  margin: 0;
-  color: #666666;
 }
 
 /* Kartu formulir */

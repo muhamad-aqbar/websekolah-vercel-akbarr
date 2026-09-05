@@ -47,7 +47,7 @@ function tambahKeKeranjang(nama) {
  
 <style scoped>
 .card {
- border: 1px solid #991515;
+ border: 1px solid #410469;
  border-radius: 10px;
  padding: 14px;
  width: 380px;
@@ -80,10 +80,10 @@ button {
  padding: 6px 12px;
  border: none;
  border-radius: 6px;
- background: #811616;
+ background: #c7206e49;
  color: white;
  cursor: pointer;
 }
-button:hover { background: #886262; }
+button:hover { background: #68265f; }
  
 </style>

@@ -35,7 +35,7 @@ const daftarProduk = [
     <main class="px-5 py-10 max-w-[1100px] mx-auto">
       <div class="flex flex-wrap justify-center gap-4">
         <div
-          class="flex justify-center basis-[calc((100%-32px)/3)] grow-0 shrink-0 max-[700px]:basis-[calc((100%-16px)/2)] max-[480px]:basis-full"
+          class="flex justify-center w-full max-w-[380px] basis-[calc((100%-32px)/3)] grow-0 shrink-0 max-[700px]:basis-[calc((100%-16px)/2)] max-[480px]:basis-full"
           v-for="produk in daftarProduk"
           :key="produk.id"
         >

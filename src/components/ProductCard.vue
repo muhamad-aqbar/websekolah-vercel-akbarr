@@ -1,4 +1,3 @@
-src/components/ProductCard.vue (dikembangkan — lengkapi bagian bergaris)
 <script setup>
 import { ref } from 'vue'
  
@@ -31,14 +30,18 @@ function tambahKeKeranjang(nama) {
 </script>
  
 <template>
+  
   <div class="card">
+    
     <div class="image-box">
-      <img :src="gambar" :alt="nama" :style="imgStyle" @click="bukaPreview(gambar)" />
+        <img :src="gambar" :alt="nama" :style="imgStyle" @click="bukaPreview(gambar)" />
+      </div>
+          <h3>{{ nama }}</h3>
+      <p>$ {{ harga.toLocaleString('id-ID') }}</p>
+      <div class="btn-grad">
+        <button @click="tambahKeKeranjang(nama)">Tambah ke Keranjang</button>
+      </div>
     </div>
-    <h3>{{ nama }}</h3>
-    <p>$ {{ harga.toLocaleString('id-ID') }}</p>
-    <button @click="tambahKeKeranjang(nama)">Tambah ke Keranjang</button>
-  </div>
  
   <div v-if="gambarDipilih" class="preview-overlay" @click="tutupPreview">
     <img :src="gambarDipilih" class="preview-besar" />
@@ -50,14 +53,20 @@ function tambahKeKeranjang(nama) {
  border: 1px solid #410469;
  border-radius: 10px;
  padding: 14px;
- width: 380px;
+ width: 100%;
+ max-width: 380px;
+ margin: 0 auto;
  text-align: center;
- display: flexbox;
- 
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
 }
 .image-box {
- width: 350px;
+ width: 100%;
+ max-width: 350px;
  height: 250px;
+ margin: 0 auto;
  overflow: hidden;
  border-radius: 6px;
  line-height: 0;
@@ -65,25 +74,42 @@ function tambahKeKeranjang(nama) {
 .card img {
  display: block;
  width: 100%;
+ height: 100%;
  border-radius: 6px;
 }
  
 .preview-overlay {
   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
   background: rgba(0,0,0,0.7);
-  display: flex; align-items: center; justify-content: center;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 }
 .preview-besar { max-width: 80%; max-height: 80%; border-radius: 8px; }
  
-button {
- margin-top: 8px;
- padding: 6px 12px;
- border: none;
- border-radius: 6px;
- background: #c7206e49;
- color: white;
- cursor: pointer;
+.btn-grad {
+  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 51%, #1D2B64 100%);
 }
-button:hover { background: #68265f; }
+
+.btn-grad {
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #130101;
+  border-radius: 10px;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #140202;
+  text-decoration: none;
+}
  
 </style>

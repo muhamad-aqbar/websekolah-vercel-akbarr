@@ -68,7 +68,7 @@ function ambilInisial(nama) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #340041fa; /* sesuaikan dengan warna tema toko */
+  background-color:  #340041fa ; /* sesuaikan dengan warna tema toko */
   color: #ae8dbb;
   font-weight: bold;
   font-size: 1.4rem;

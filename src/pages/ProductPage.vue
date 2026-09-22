@@ -1,3 +1,4 @@
+
 <script setup>
 import ProductCard from '../components/ProductCard.vue'
 // import tasSekolah from '../assets/tas-sekolah.jpg'
@@ -27,15 +28,15 @@ const daftarProduk = [
 <template>
   <div>
     <!-- Banner Produk Kami -->
-    <section class="bg-gradient-to-br from-black/[0.137] from-[40%] via-[#9c3aed]/[0.286] via-[60%] to-[#2c1414] to-100% text-white text-center px-5 py-[60px]">
-      <h1 class="m-0 mb-2 text-[2.2rem]">Produk Kami</h1>
-      <p class="m-0 text-base opacity-90">Temukan koleksi mobil pilihan terbaik dari Barss_Shop</p>
+    <section class="banner">
+      <h1 class="banner-title">Produk Kami</h1>
+      <p class="banner-desc">Temukan koleksi mobil pilihan terbaik dari Barss_Shop</p>
     </section>
 
-    <main class="px-5 py-10 max-w-[1100px] mx-auto">
-      <div class="flex flex-wrap justify-center gap-4">
+    <main class="product-main">
+      <div class="product-grid">
         <div
-          class="flex justify-center w-full max-w-[380px] basis-[calc((100%-32px)/3)] grow-0 shrink-0 max-[700px]:basis-[calc((100%-16px)/2)] max-[480px]:basis-full"
+          class="product-item"
           v-for="produk in daftarProduk"
           :key="produk.id"
         >
@@ -50,3 +51,63 @@ const daftarProduk = [
     </main>
   </div>
 </template>
+
+<style scoped>
+.banner {
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.137) 40%,
+    rgba(156, 58, 237, 0.286) 60%,
+    #2c1414 100%
+  );
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.banner-title {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+.banner-desc {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.product-main {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 380px;
+  flex-basis: calc((100% - 32px) / 3);
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .product-item {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-item {
+    flex-basis: 100%;
+  }
+}
+</style>

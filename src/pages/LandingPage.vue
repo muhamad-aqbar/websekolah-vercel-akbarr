@@ -1,16 +1,16 @@
 <template>
   <div class="landing-page">
     <!-- HERO SECTION -->
-    <section class="bg-gradient-to-br from-black/[0.137] from-[40%] via-[#9c3aed]/[0.286] via-[60%] to-[#2c1414] to-100% text-white text-center px-5 py-20 rounded-[20px]">
+    <section class="hero">
         <center>
-        <h1 class="text-4xl font-bold mb-6 leading-snug text-center">Mau Mobil? Beli lah di ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
-        <p class="text-lg max-w-[500px] mx-auto mb-10 opacity-90 leading-relaxed ">
+        <h1 class="hero-title">Mau Mobil? Beli lah di ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</h1>
+        <p class="hero-desc">
           Platform untuk mobil-mobil class atass.
         </p>
       </center>
       <RouterLink
         to="/product"
-        class="inline-block bg-white text-teal-700 px-7 py-3 rounded-full font-semibold no-underline transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-lg"
+        class="hero-btn"
       >
         Lihat Produk
       </RouterLink>
@@ -61,6 +61,52 @@ const features = [
 .landing-page {
   font-family: "Segoe UI", sans-serif;
   color: #222;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 0, 0.137) 40%,
+    rgba(156, 58, 237, 0.286) 60%,
+    #2c1414 100%
+  );
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 20px;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.375;
+  text-align: center;
+}
+
+.hero-desc {
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  opacity: 0.9;
+  line-height: 1.625;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #fff;
+  color: #0f766e;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== FEATURES ===== */

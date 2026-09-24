@@ -40,19 +40,19 @@
 import CardProps from '../components/CardProps.vue'
 const features = [
   {
-    icon: '🚀',
-    title: 'Cepat & Ringan',
-    desc: 'Performa optimal tanpa membebani perangkat pengguna.'
+    icon: '🚘',
+    title: 'Layanan kami',
+    desc: 'Kami menyediakan mobil mobil berkualitas.'
   },
   {
-    icon: '🎨',
-    title: 'Desain Fleksibel',
+    icon: '',
+    title: 'Ulasan shop ',
     desc: 'Tampilan mudah disesuaikan dengan kebutuhan proyek kalian.'
   },
   {
     icon: '🔒',
-    title: 'Aman & Terpercaya',
-    desc: 'Data pengguna dikelola dengan standar keamanan yang baik.'
+    title: 'Terpercaya',
+    desc: 'Kami juga menyediakan pelayanan yang terpercaya untuk para customer kami .'
   }
 ]
 </script>
@@ -95,7 +95,7 @@ const features = [
 
 .hero-btn {
   display: inline-block;
-  background: #fff;
+  background:rgb(95, 17, 158);
   color: #0f766e;
   padding: 12px 28px;
   border-radius: 9999px;

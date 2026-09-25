@@ -7,8 +7,8 @@
  </nav> -->
 <header class="navbar">
       <!-- <div class="brand-logo"></div>-->
-      <p style="font-size: 30px;"> ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</p>
-      
+      <p> ℬ𝒶𝓇𝓈𝓈_𝒮𝒽ℴ𝓅</p>
+      <!-- style="font-size: 30px -->
       <nav class="nav-links">
         <RouterLink to="/" class="nav-item">Landing</RouterLink>
         <RouterLink to="/product" class="nav-item">Product</RouterLink>
@@ -22,6 +22,9 @@
 
 </script>
 <style scoped>
+p{
+  font-size: 30px;
+}
 nav {
     display:flex;
     align-items: center;

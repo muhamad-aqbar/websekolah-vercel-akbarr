@@ -68,7 +68,7 @@ const daftarProduk = [
 .banner-title {
   margin: 0 0 8px;
   font-size: 2.2rem;
-}
+} 
 
 .banner-desc {
   margin: 0;
